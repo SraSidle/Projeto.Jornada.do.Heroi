@@ -1,0 +1,110 @@
+       console.clear();
+ const prompt = require('prompt-sync')();
+
+ let convite = prompt('Oi, aceita participar do torneio mundial de Jokenpô? Digite |sim| para continuar ').toUpperCase();
+       console.clear();
+
+    while (convite == 'SIM')
+{
+       console.log('Olá, player. Boas vindas ao torneio mundial de Jokenpô!');
+       console.log();
+
+      saudacao = prompt ('Clique ENTER para continuar');
+       console.clear();
+
+   let rodadas = 0;
+
+       do { rodadas = prompt('Quantas rodadas você quer jogar? ');
+
+         if(rodadas === '') {
+            rodadas = 'null';
+       }
+  } while (isNaN(rodadas));
+
+         if(rodadas == 0) {
+       console.log('Digite um número acima de zero para continuar!');
+       break;
+  }
+
+   let pontuacaojog = 0 ;
+   let pontuacaomaq = 0 ;
+   let nome = prompt('Digite seu nome. ').toUpperCase() ;
+   let oponente = prompt('Digite o nome do seu oponente. ').toUpperCase();
+      console.clear();
+
+          for (i = 0 ; i < rodadas ; i++) {
+
+   let elementos = [' Pedra ' , ' Papel ' , ' Tesoura '];
+      console.log('______________________________________________________________________________________________________________________________________________');
+
+   let escolha = ''
+
+      do { escolha = prompt(` Escolha um número para jogar: | (0) para Pedra | (1) para Papel | (2) para Tesoura. |. Sua escolha é: `)
+
+        if(escolha === ''){
+           escolha ='null';
+        }
+  } while(isNaN(escolha));
+
+     console.log('¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨');
+
+  if ((escolha == 0) || (escolha == 1) || (escolha == 2)) {
+      console.log(`${nome} jogou: ${elementos[escolha]}`);
+      console.log();
+} else { ((escolha != 0) || (escolha != 1) || (escolha != 2))
+      console.log('ERRO! Escolha uma resposta válida!') ; {break}
+}
+   let numMaquina = [];
+       numMaquina = Math.floor(Math.random() * 3);
+      console.log(`${oponente} jogou: ${elementos[numMaquina]}`);
+      console.log();
+
+   let empate = 'Vocês empataram!' ; 
+   let ganhar = 'Você ganhou a rodada!' ;
+   let perder = 'Você perdeu a rodada!' ;
+
+       if (escolha == numMaquina) {
+      console.log(`Foram jogados elementos iguais. ${empate}`)
+} else if (escolha == 0 && numMaquina == 1) {
+      console.log(`Papel embrulha Pedra, ${perder}`) 
+        pontuacaomaq ++
+} else if (escolha == 0 && numMaquina == 2) {
+      console.log(`Pedra quebra Tesoura, ${ganhar}`) 
+        pontuacaojog ++ 
+} else if (escolha == 1 && numMaquina == 0) {  
+      console.log(`Papel embrulha Pedra, ${ganhar}`) 
+        pontuacaojog ++ 
+} else if (escolha == 1 && numMaquina == 2) {
+      console.log(`Tesoura corta Papel, ${perder}`) 
+        pontuacaomaq ++
+} else if (escolha == 2 && numMaquina == 0) {
+      console.log(`Pedra quebra Tesoura, ${perder}`) 
+        pontuacaomaq ++
+} else {(escolha == 2 && numMaquina == 1)
+      console.log(`Tesoura corta Papel, ${ganhar}`) 
+        pontuacaojog ++ }
+     { 
+      console.log();
+      console.log(`<<< ${nome} >>> |${pontuacaojog}| X |${pontuacaomaq}| <<< ${oponente} >>>`);
+      console.log();
+      console.log('<<<|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|>>>');
+      console.log();
+     }   
+   }    
+ {
+       if(pontuacaojog == pontuacaomaq) {     
+      console.log(`${nome} e ${oponente} empataram. Não deixe esse placar assim, jogue novamente!`)
+      console.log()
+} else if(pontuacaojog < pontuacaomaq) {
+      console.log(`GAME OVER, ${oponente} ganhou de você por um placar de:|${pontuacaomaq}| a |${pontuacaojog}|! `)
+      console.log()
+} else { (pontuacaojog > pontuacaomaq) ;
+      console.log(`Parabéns, ${nome}. Você venceu o torneio Mundial de Jokenpô. Com um placar de:|${pontuacaojog}| a |${pontuacaomaq}|`)
+      console.log()
+       fim = prompt(`${nome}, a partida terminou... Aperte ENTER para continuar. `)
+   }
+ }
+      console.clear();
+ convite = prompt(`${nome}, vamos jogar novamente? Digite |sim| para continuar. Ou ENTER para fechar o jogo. `).toUpperCase();
+      console.clear();
+}   
