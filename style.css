@@ -1,0 +1,279 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Roboto;
+}
+
+@media only screen and (max-width: 640px){
+    #sobremim{
+        align-items: center;
+        flex-wrap: wrap;
+        margin-right: 0rem;
+        margin-top: 0rem;
+        font-size: 0.4rem;
+        float: none;
+        margin: 0;
+        word-wrap: break-all;
+    }
+
+    #titulo{
+        text-align: center;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    #listaImagem{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card{
+        width: 100vw;
+        margin: 0;
+    }
+   }
+
+   @media only screen and (max-width: 380px){
+
+    ul#menu{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    
+    ul#menu li{
+        padding: 0; 
+        font-size: .6rem;
+    }
+
+    #sobremim{
+        width: 15%;
+        align-items: center;
+        margin-right: 0rem;
+        margin-top: 0rem;
+        float: none;
+        font-size: .4rem;
+        margin: 0;
+    }
+
+
+   }
+
+@media only screen and (max-width: 320px){
+
+ul#menu{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    }
+    
+ul#menu li{
+    padding: 0; 
+    font-size: .6rem;
+    }
+
+#sobremim{   
+    align-items: center;
+    margin-right: 0rem;
+    margin-top: 0rem;
+    float: none;
+    font-size: .7rem;
+    margin: 0;
+    }
+
+    #listaImagem{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+
+.card{
+    width: 70vw;
+    margin: 0;
+    }
+
+}
+   
+header {
+    display: flex;
+    /* flex-wrap: wrap; */
+    width: 100%;
+    min-height: 8vh;
+    /* background-image: url(./spaceship.jpg); */
+    /* position: relative; */
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+}
+
+header nav{
+    width: 100%;
+    color: white;
+    /* right: 1rem;
+    top: 1rem; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end
+}
+
+header nav ul{
+    display: flex;
+}
+
+body{
+    background-color: rgba(228, 194, 228, 0.589);
+    width: 100vw;
+    height: 100vh;
+}
+
+#titulo{
+    font-size: 1.3rem;
+    margin: 1rem 0 0 .5rem;
+}
+
+ul#menu{
+    display: flex;
+    list-style: none; /* remover marcadores */
+}
+
+ul#menu li{
+    padding: 0.7rem; 
+    font-size: 1.3rem;
+}
+
+ul#menu a {
+    color: white;
+    text-decoration: none; /* remover o underline */
+}
+
+ul#menu a:hover {
+    color: gray;
+}
+
+#sectionimg{
+    background-image: url(./spaceship.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    height: 18rem;
+}
+h1{
+    font-size: 1.2rem;
+}
+p{
+    font-size: 1rem;
+}
+
+section#sobremim{
+    width: 90%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin: 2rem 5%;
+    /* display: flex;
+    flex-wrap: wrap;
+    word-wrap:break-word;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    
+    margin-top: 2rem; 
+    margin-right: 2rem;
+    width: 40rem;
+    float: right;
+    font-size: 1.2rem; */
+}
+
+#contato{
+    text-align: center;
+    padding: 1rem;
+}
+
+#listacontatos{
+    text-align: center;   
+}
+
+#projetos{
+    text-align: center;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+#listaImagens{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    /* width: 40rem; */
+    max-height: 10rem;
+    overflow: hidden;
+    /* margin-left: 21rem; */
+}
+
+.imagens{
+    max-width: 100%;
+    height: 150px;
+    width: 300px;
+    object-fit: cover;
+    box-shadow: 5px 5px 5px 2px #00000060;
+    margin-bottom: 1rem;
+}
+
+.imagens:hover{
+    box-shadow: 5px 5px 5px 2px #00000098;
+}
+
+  #listaImagens.open {
+    max-height: 1000px;  /* mostrar tudo, ativado pelo botao */
+  }
+
+  button {
+    background: #211564;
+    color: #fff;
+    padding: 0.6rem;
+    margin-top: 20px;
+    border: none;
+    border-radius: 4px;
+  }
+
+  button:hover {
+    cursor: pointer;
+    background: purple;
+    transition: 0.3s;
+  }
+
+#skills{
+    text-align: center;
+    padding: 1rem;
+}
+
+footer{
+    background-color: purple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    color: white;
+    height: 7vh;
+    font-size: 0.8rem;
+}
+
+footer a{
+    color: gray;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+footer a:hover{
+    color: white;
+}
